@@ -1,0 +1,20 @@
+<suite name="Journey1">
+    <parameter name="url" value="https://news.ladbrokes.com"/>
+<!--    <test name="PageOpenTest">-->
+<!--        <classes>-->
+<!--            <class name="PageOpenTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="AdditionalArticlesTest">-->
+<!--        <classes>-->
+<!--            <class name="AdditionalArticlesTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name="RandomArticleTest">
+        <classes>
+            <class name="RandomArticleTest"/>
+        </classes>
+    </test>
+</suite>
