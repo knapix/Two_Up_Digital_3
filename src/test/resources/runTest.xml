@@ -1,18 +1,21 @@
-<suite name="Journey1">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Two_Up_Digital_Exercise">
     <parameter name="url" value="https://news.ladbrokes.com"/>
-<!--    <test name="PageOpenTest">-->
-<!--        <classes>-->
-<!--            <class name="PageOpenTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
 
-<!--    <test name="AdditionalArticlesTest">-->
-<!--        <classes>-->
-<!--            <class name="AdditionalArticlesTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Journey1">
+        <classes>
+            <class name="PageOpenTest"/>
+        </classes>
+    </test>
 
-    <test name="RandomArticleTest">
+    <test name="Journey2">
+        <classes>
+            <class name="AdditionalArticlesTest"/>
+        </classes>
+    </test>
+
+    <test name="Journey3">
         <classes>
             <class name="RandomArticleTest"/>
         </classes>

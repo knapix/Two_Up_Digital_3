@@ -14,6 +14,6 @@ public class CorrectArticleOpenedAssertion extends MainPage {
     }
 
     public void isCorrectArticleOpened(String brickTitle, String articleTitle) {
-        Assert.assertEquals(brickTitle, articleTitle, "Finito!");
+        Assert.assertEquals(brickTitle, articleTitle, "Wrong title of article!");
     }
 }

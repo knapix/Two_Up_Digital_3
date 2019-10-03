@@ -8,14 +8,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
+import pages.ArticlePage;
 import pages.IndexPage;
-import pages.PremierLeaguePage;
 
 public class MainTest {
     WebDriver driver;
     WebDriverWait wait;
     IndexPage indexPage;
-    PremierLeaguePage premierLeaguePage;
+    ArticlePage articlePage;
     PremierLeagueAssertion premierLeagueAssertion;
     AdditionalArticlesLoadedAssertion additionalArticlesLoadedAssertion;
     CorrectArticleOpenedAssertion correctArticleOpenedAssertion;
@@ -23,25 +23,21 @@ public class MainTest {
 
     @BeforeTest
     @Parameters({"url"})
-    public void before( String url) {
+    public void before(String url) {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
         System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\chromedriver.exe");
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, 30);
         indexPage = new IndexPage(driver, wait, url);
-        premierLeaguePage = new PremierLeaguePage(driver, wait);
+        articlePage = new ArticlePage(driver, wait);
         premierLeagueAssertion = new PremierLeagueAssertion(driver, wait);
         additionalArticlesLoadedAssertion = new AdditionalArticlesLoadedAssertion(driver, wait);
         correctArticleOpenedAssertion = new CorrectArticleOpenedAssertion(driver, wait);
-
-
-       // indexPage.openIndexPage();
-
     }
 
-//    @AfterTest
-//    public void quitDriver() {
-//        driver.quit();
-//    }
+    @AfterTest
+    public void quitDriver() {
+        driver.quit();
+    }
 }

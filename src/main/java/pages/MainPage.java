@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,6 +8,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 
 
 public abstract class MainPage {
@@ -17,7 +20,6 @@ public abstract class MainPage {
     public MainPage(WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
         this.wait = wait;
-
     }
 
 
@@ -30,6 +32,17 @@ public abstract class MainPage {
         //wait.until(ExpectedConditions.elementToBeClickable(element)).click();
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
+
+
+    public static String getTextNode(WebElement e) {
+        String text = e.getAttribute("innerText").trim();
+        List<WebElement> children = e.findElements(By.cssSelector(" *"));
+        for (WebElement child : children) {
+            text = text.replaceFirst(child.getText(), "").trim();
+        }
+        return text;
+    }
+
 
 
     public boolean waitForJStoLoad() {

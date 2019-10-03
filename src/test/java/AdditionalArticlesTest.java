@@ -9,15 +9,5 @@ public class AdditionalArticlesTest extends MainTest {
         indexPage.clickSeeMoreOnLatestBettingNews();
         int sizeAfter = indexPage.countElementsInLatestBettingNews();
         additionalArticlesLoadedAssertion.isAdditionalArticlesLoaded(sizeBefore, sizeAfter);
-
-
-//                indexPage.countElementsInLatestBettingNews();
-//                indexPage.clickSeeMoreOnLatestBettingNews();
-//                indexPage.countMoreElementsInLatestBettingNews();
-//                additionalArticlesLoadedAssertion.isAdditionalArticlesLoaded();
-             //   indexPage.additionalArticlesLoadedAssertion;
-                //.isAdditionalArticlesLoaded();
-
-
     }
 }
