@@ -25,7 +25,7 @@
                     <configuration>
                         <useSystemClassLoader>false</useSystemClassLoader>
                          <suiteXmlFiles>
-                           <suiteXmlFile>runTest.xml</suiteXmlFile>
+                           <suiteXmlFile>src/test/resources/runTest.xml</suiteXmlFile>
                          </suiteXmlFiles>
                     </configuration>
                 </plugin>
