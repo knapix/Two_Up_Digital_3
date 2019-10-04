@@ -29,7 +29,6 @@ public abstract class MainPage {
     }
 
     public void waitForElementToBeClickableAndClick(WebElement element) {
-        //wait.until(ExpectedConditions.elementToBeClickable(element)).click();
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
 
