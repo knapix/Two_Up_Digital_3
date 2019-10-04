@@ -1,6 +1,5 @@
 package pages;
 
-import assertions.AdditionalArticlesLoadedAssertion;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,7 +13,6 @@ import java.util.Random;
 
 public class IndexPage extends MainPage {
 
-    public AdditionalArticlesLoadedAssertion additionalArticlesLoadedAssertion;
 
     @FindBy(css = "[id^='ubermenu-main'] [href$='/football']")
     private WebElement tabFootball;
@@ -59,11 +57,6 @@ public class IndexPage extends MainPage {
 
     public int countElementsInLatestBettingNews() {
         return latestBettingNewsDefault.size();
-    }
-
-    public void countMoreElementsInLatestBettingNews() {
-        int sizeMoreElement = latestBettingNewsExtended.size();
-        System.out.println(sizeMoreElement);
     }
 
     public void clickSeeMoreOnLatestBettingNews() {
