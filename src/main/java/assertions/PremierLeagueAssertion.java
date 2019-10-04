@@ -17,8 +17,5 @@ public class PremierLeagueAssertion extends MainPage {
     public void isUserOnPremierLeaguePage() {
         String actualTitle = driver.getTitle();
         Assert.assertTrue(actualTitle.contains("Premier League"), "This page does not contain 'Premier League'!");
-        //asset soft -
-
-        //assert all
     }
 }
